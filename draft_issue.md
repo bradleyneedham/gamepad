@@ -10,6 +10,6 @@ Many modern gamepads support touch functionality. This proposal addresses the mi
 * Security and Privacy self-review:
 * Primary contacts:
   * Matt Reynolds (@nondebug), Google, Spec editor, Implementer
-  * Bradley Needham (@bradleyneedham), Sony, Spec submitter, Implementer
+  * Bradley Needham (@bradleyneedham), Sony, Spec contributor, Implementer
 * Organization(s)/project(s) driving the specification: Web Apps WG
 * Chrome Status: https://chromestatus.com/feature/4782975812108288
