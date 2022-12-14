@@ -1,6 +1,6 @@
 Greetings TAG!
 
-I'm requesting a TAG review of Gamepad Extensions API touch events.
+I'm requesting a TAG review of Gamepad Extensions API touch input.
 
 Many modern gamepads support touch functionality. This proposal addresses the missed inputs by adding the events to the gamepad.
 
