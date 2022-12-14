@@ -1,6 +1,6 @@
 ## Gamepad Touch Extension
 ### Overview
-Modern gamepads support touch functionality, e.g Sony DualSense®5, Steam deck and Steam Controllers, Sony DualShock®4. The Standard Gamepad specification should be updated to include touchpad functionality, and the Gamepad API should be extended so that users with touch-enabled gamepads can use touch inputs on the web.
+Modern gamepads support touch functionality, e.g. Sony DualSense®5, Steam deck and Steam Controllers, and Sony DualShock®4. The Standard Gamepad specification should be updated to include touchpad functionality, and the Gamepad API should be extended so that users with touch-enabled gamepads can use touch inputs on the web.
 
 #### Standard Gamepad
 The Standard Gamepad specification describes the positions of up to 17 buttons and 4 axes that are found on a typical gamepad. To support getting touchpad values, the standard gamepad will be extended to specify multiple touches found on a modern gamepad.
