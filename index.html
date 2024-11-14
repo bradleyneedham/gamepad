@@ -485,8 +485,8 @@
             The {{Gamepad/touches}} getter steps are:
           </p>
           <ol>
-            <li>If [=this=].{{Gamepad/[[touches]]}} not `null` and not
-            empty, return [=this=].{{Gamepad/[[touches]]}}.
+            <li>If [=this=].{{Gamepad/[[touches]]}} not `null` and not empty,
+            return [=this=].{{Gamepad/[[touches]]}}.
             </li>
             <li>Otherwise return `null`.
             </li>
@@ -679,8 +679,8 @@
           </li>
         </ol>
         <p>
-          To <dfn>update touches</dfn> for |gamepad:Gamepad|, run
-          the following steps:
+          To <dfn>update touches</dfn> for |gamepad:Gamepad|, run the following
+          steps:
         </p>
         <ol class="algorithm">
           <li>Let |surfaceId:unsigned long| be 0.
@@ -688,8 +688,8 @@
           <li>Remove any existing events from
           {{Gamepad}}.{{Gamepad/[[touches]]}}.
           </li>
-          <li>Repeat the following steps for each touch surface on
-          |gamepad| in touch surface enumeration order:
+          <li>Repeat the following steps for each touch surface on |gamepad| in
+          touch surface enumeration order:
             <ol>
               <li>Let |surfaceDimensions| be an `null`.
               </li>
@@ -697,12 +697,10 @@
               device units:
                 <ol>
                   <li>Set |touchEvent|.{{GamepadTouch/surfaceDimensions}}[0] to
-                  the maximum X dimension on the touch surface in device
-                  units.
+                  the maximum X dimension on the touch surface in device units.
                   </li>
                   <li>Set |touchEvent|.{{GamepadTouch/surfaceDimensions}}[1] to
-                  the maximum Y dimension on the touch surface in device
-                  units.
+                  the maximum Y dimension on the touch surface in device units.
                   </li>
                 </ol>
               </li>
@@ -717,8 +715,8 @@
                   <li>Set |touchEvent|.{{GamepadTouch/surfaceId}} to be
                   |surfaceId|.
                   </li>
-                  <li>If the touch data is part of an existing [=active touch
-                  point=] tracked by the user agent:
+                  <li>If the touch data is part of an existing active touch
+                  point tracked by the user agent:
                     <ol>
                       <li>Set |touchEvent|.{{GamepadTouch/touchId}} to the
                       touchId of the active touch point.
@@ -739,9 +737,9 @@
                   <li>
                     <p>
                       |position|[0] should be set to the device X coordinate
-                      relative to the device touch surface and normalized
-                      to [-1.0,1.0] where -1.0 is the leftmost coordinate and
-                      1.0 is the rightmost coordinate.
+                      relative to the device touch surface and normalized to
+                      [-1.0,1.0] where -1.0 is the leftmost coordinate and 1.0
+                      is the rightmost coordinate.
                     </p>
                     <p class="note" title=
                     "Possible implementation (if surfaceDimensions are available)">
@@ -752,9 +750,9 @@
                   <li>
                     <p>
                       |position|[1] should be set to the device Y coordinate
-                      relative to the device touch surface and normalized
-                      to [-1.0,1.0] where -1.0 is the topmost coordinate and
-                      1.0 is the bottommost coordinate.
+                      relative to the device touch surface and normalized to
+                      [-1.0,1.0] where -1.0 is the topmost coordinate and 1.0
+                      is the bottommost coordinate.
                     </p>
                     <p class="note" title=
                     "Possible implementation (if surfaceDimensions are available)">
@@ -808,8 +806,8 @@
               <li>Initialize |gamepad|.{{Gamepad/[[buttons]]}} to the result of
               [=initializing buttons=] for |gamepad|.
               </li>
-              <li>Initialize |gamepad|.{{Gamepad/[[touches]]}} to the
-              result of [=initializing touches=] for |gamepad|.
+              <li>Initialize |gamepad|.{{Gamepad/[[touches]]}} to the result of
+              [=initializing touches=] for |gamepad|.
               </li>
               <li>Initialize |gamepad|.{{Gamepad/[[vibrationActuator]]}}
               following the steps of [=constructing a GamepadHapticActuator=]
@@ -1020,15 +1018,15 @@
           </li>
         </ol>
         <p>
-          To <dfn data-lt="initializing touches">initialize
-          touches</dfn> for a gamepad, run the following steps:
+          To <dfn data-lt="initializing touches">initialize touches</dfn> for a
+          gamepad, run the following steps:
         </p>
         <ol>
           <li>If the |gamepad| has touch surfaces, initialize |gamepad|'s
           {{Gamepad/touches}} to an empty [=list=].
           </li>
-          <li>Otherwise, initialize |gamepad|'s {{Gamepad/touches}} <code>
-            null</code>.
+          <li>Otherwise, initialize |gamepad|'s {{Gamepad/touches}}
+          <code>null</code>.
           </li>
         </ol>
       </section>
