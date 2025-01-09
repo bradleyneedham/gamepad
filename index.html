@@ -311,7 +311,7 @@
             `null`
           </td>
           <td>
-            List of generated touch events.
+            List of generated touches.
           </td>
         </tr>
         <tr>
@@ -478,8 +478,8 @@
         <dd>
           <p>
             A list of {{GamepadTouch}} objects generated from all touch
-            surfaces. If the device does not support touch events, MUST be set
-            to `null`.
+            surfaces. If the device does not support touches, MUST be set to
+            `null`.
           </p>
           <p>
             The {{Gamepad/touches}} getter steps are:
@@ -683,7 +683,7 @@
           steps:
         </p>
         <ol class="algorithm">
-          <li>Remove any existing events from
+          <li>Remove any existing objects from
           {{Gamepad}}.{{Gamepad/[[touches]]}}.
           </li>
           <li>Repeat the following steps for each touch surface on |gamepad| in
