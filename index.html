@@ -689,16 +689,13 @@
           <li>Repeat the following steps for each touch surface on |gamepad| in
           touch surface enumeration order:
             <ol>
-              <li>Let |surfaceId:unsigned long| be the current surface enumeration index.
+              <li>Let |surfaceId:unsigned long| be the current surface
+              enumeration index.
               </li>
               <li>If the touch surface exposes maximum surface dimensions in
-              device units:
-                <ol>
-                  <li>Set |touch|.{{GamepadTouch/surfaceDimensions}} to a {{DOMRect}}
-                  with `width` and `height` initialized to the maximum X and Y 
-                  dimensions on the touch surface in device units.
-                  </li>
-                </ol>
+              device units, then set |touch|.{{GamepadTouch/surfaceDimensions}}
+              to a {{DOMRect}} with `width` and `height` initialized to the
+              maximum X and Y dimensions on the touch surface in device units.
               </li>
               <li>Repeat the following steps for each active touch point
               reported by the |gamepad| for the current touch surface.
@@ -708,14 +705,13 @@
                   </li>
                   <li>Let |touch:GamepadTouch| be a {{GamepadTouch}}.
                   </li>
-                  <li>Set |touch|.{{GamepadTouch/surfaceId}} to be
-                  |surfaceId|.
+                  <li>Set |touch|.{{GamepadTouch/surfaceId}} to be |surfaceId|.
                   </li>
                   <li>If the touch data is part of an existing active touch
                   point tracked by the user agent:
                     <ol>
-                      <li>Set |touch|.{{GamepadTouch/touchId}} to the
-                      touchId of the active touch point.
+                      <li>Set |touch|.{{GamepadTouch/touchId}} to the touchId
+                      of the active touch point.
                       </li>
                       <li>Otherwise, set touchId to nextTouchId and increment
                       nextTouchId.
@@ -727,27 +723,25 @@
                       </li>
                     </ol>
                   </li>
-                  <li>Let |position| be a [=new=] {{DOMPoint}} with `x` initialized 
-                  to device X coordinate relative to the device touch surface and 
-                  normalized to [-1.0,1.0] where -1.0 is the leftmost coordinate and 1.0 
-                  is the rightmost coordinate and `y` initialized to the device touch 
-                  surface and normalized to [-1.0,1.0] where -1.0 is the leftmost 
-                  coordinate and 1.0 is the rightmost coordinate.
+                  <li>Let |position| be a [=new=] {{DOMPoint}} with `x`
+                  initialized to device X coordinate relative to the device
+                  touch surface and normalized to [-1.0,1.0] where -1.0 is the
+                  leftmost coordinate and 1.0 is the rightmost coordinate and
+                  `y` initialized to the device touch surface and normalized to
+                  [-1.0,1.0] where -1.0 is the leftmost coordinate and 1.0 is
+                  the rightmost coordinate.
                   </li>
-                    <p class="note" title=
-                    "Possible implementation (if surfaceDimensions are available)">
-                      `x = (2.0 * touchData.x / surfaceDimensions.width)
-                      - 1`
-                    </p>
-                    <p class="note" title=
-                    "Possible implementation (if surfaceDimensions are available)">
-                      `y = (2.0 * touchData.y / surfaceDimensions.height)
-                      - 1`
-                    </p>
+                  <p class="note" title=
+                  "Possible implementation (if surfaceDimensions are available)">
+                    `x = (2.0 * touchData.x / surfaceDimensions.width) - 1`
+                  </p>
+                  <p class="note" title=
+                  "Possible implementation (if surfaceDimensions are available)">
+                    `y = (2.0 * touchData.y / surfaceDimensions.height) - 1`
+                  </p>
+                  <li>Add |touch| to {{Gamepad}}.{{Gamepad/[[touches]]}}.
                   </li>
                 </ol>
-              </li>
-              <li>Add |touch| to {{Gamepad}}.{{Gamepad/[[touches]]}}.
               </li>
             </ol>
           </li>
@@ -1192,7 +1186,7 @@
           <dfn>position</dfn>
         </dt>
         <dd>
-          A DOMPoint which holds the x, y coordinates of the touch event. 
+          A {{DOMPoint}} which holds the x, y coordinates of the touch event.
           The z and w value are currently unused. The range of each coordinate
           is normalized to [-1.0, 1.0]. Along the x-axis, -1.0 references the
           leftmost coordinate and 1.0 references the rightmost coordinate.
@@ -1203,8 +1197,8 @@
           <dfn>surfaceDimensions</dfn>
         </dt>
         <dd>
-          A {{DOMRect}} initialized with the width and height of the touch surface
-          in integer units. If not available then <code>null</code>.
+          A {{DOMRect}} initialized with the width and height of the touch
+          surface in integer units. If not available then <code>null</code>.
         </dd>
       </dl>
     </section>
